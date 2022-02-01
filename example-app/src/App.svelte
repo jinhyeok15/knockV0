@@ -12,22 +12,22 @@
 
 <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
 
+<header>
+	<a href="/"><div class="knock"><b>KnocK</b></div></a>
+	<div class="nav">
+		<div class="bars" use:links>
+			<div class="mydoc bars_component"><NavLink path="/mydoc" navName="내 문서" navId="nav-mydoc"/></div>
+			<div class="search bars_component"><NavLink path="/search" navName="검색" navId="nav-search"/></div>
+			<div class="package bars_component"><NavLink path="/packages" navName="패키지"navId="nav-package"/></div>
+		</div>
+	</div>
+	<div class="loginbar">
+		<div class="login loginbar_component"><a href="/">로그인</a></div>
+		<div class="join loginbar_component"><a href="/">회원가입</a></div>
+	</div>
+</header>
 <Router url="{url}">
 	<main>
-		<header>
-			<a href="/"><div class="knock"><b>KnocK</b></div></a>
-			<div class="nav">
-				<div class="bars" use:links>
-					<div class="mydoc bars_component"><NavLink path="/mydoc" navName="내 문서"/></div>
-					<div class="search bars_component"><NavLink path="/search" navName="검색"/></div>
-					<div class="package bars_component"><NavLink path="/packages" navName="패키지"/></div>
-				</div>
-			</div>
-			<div class="loginbar">
-				<div class="login loginbar_component"><a href="/">로그인</a></div>
-				<div class="join loginbar_component"><a href="/">회원가입</a></div>
-			</div>
-		</header>
 		<div class="body">
 			<Route path="/" component="{Home}"/>
 			<Route path="mydoc" component="{Mydoc}"/>

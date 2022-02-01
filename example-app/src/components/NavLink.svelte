@@ -2,18 +2,19 @@
 	let linkStatus = { clicked: false };
 
 	function toggle() {
-		user.loggedIn = !user.loggedIn;
+		linkStatus.clicked = !linkStatus.clicked;
 	}
     export let path;
     export let navName;
+    export let navId;
 </script>
 
 {#if !linkStatus.clicked}
-	<a href={path} class="nav-link" id="unclicked-nav" on:click={toggle}>
+	<a href={path} class="nav-link" id={navId} on:click={toggle}>
 		{navName}
     </a>
 {:else}
-	<a href={path} class="nav-link" id="clicked-nav" on:click={toggle}>
+	<a href={path} class="nav-link" id={navId} on:click={toggle}>
 		{navName}
     </a>
 {/if}
@@ -24,8 +25,5 @@
         font-size: 17px;
 		font-weight: bold;
 		color: black;
-    }
-    #clicked-nav {
-        text-decoration: underline;
     }
 </style>
