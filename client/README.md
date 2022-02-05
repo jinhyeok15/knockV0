@@ -1,4 +1,7 @@
-# Dev
+# Management
+[notion](https://www.notion.so/Client-0100a282475341aa96e5120b9693d009)
+
+# Dev-tools
 * web-framework: [svelte](doc/svelte.md)
 * libs
     * [svelte-routing](https://github.com/EmilTholin/svelte-routing)
