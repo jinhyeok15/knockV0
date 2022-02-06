@@ -6,17 +6,21 @@
 </script>
 <header>
 	<a href="/"><div class="knock"><b>KnocK</b></div></a>
-	<div class="nav">
-		<div class="bars" use:links>
-			<div class="bars_component" id="mydoc-bar">
-                <a href="/mydoc" class="{navLoc === 'mydoc' ? 'nav-link-clicked' : 'nav-link'}">내 문서</a>
-            </div>
-			<div class="bars_component" id="search-bar">
-                <a href="/search" class="{navLoc === 'search' ? 'nav-link-clicked' : 'nav-link'}">검색</a>
-            </div>
-			<div class="bars_component" id="package-bar">
-                <a href="/packages" class="{navLoc === 'package' ? 'nav-link-clicked' : 'nav-link'}">패키지</a>
-            </div>
+	<div class="navbar" use:links>
+		<div class="nav-components" id="mydoc-bar">
+			<a href="/mydoc" class="{navLoc === 'mydoc' ? 'nav-link-clicked' : 'nav-link'}">
+				<div class="nav-text-component">내 문서</div>
+			</a>
+		</div>
+		<div class="nav-components" id="search-bar">
+			<a href="/search" class="{navLoc === 'search' ? 'nav-link-clicked' : 'nav-link'}">
+				<div class="nav-text-component">검색</div>
+			</a>
+		</div>
+		<div class="nav-components" id="package-bar">
+			<a href="/packages" class="{navLoc === 'package' ? 'nav-link-clicked' : 'nav-link'}">
+				<div class="nav-text-component">패키지</div>
+			</a>
 		</div>
 	</div>
 	<div class="loginbar">
@@ -50,37 +54,36 @@
 		font-family: 'Baloo';
 		font-size: 40px;
 	}
-    .nav {
+    .navbar {
 		left: 300px;
 		width: 700px;
 		height: 60px;
 	}
-	.bars {
+	.nav-components {
 		position: absolute;
 		top: 5px;
 		left: 100px;
-		width: 500px;
-		height: 50px;
-	}
-	.bars_component {
-		position: relative;
-		top: 0%;
-		left: 0%;
 		width: 100px;
 		height: 50px;
 		text-align: center;
-		display:table-cell;
-		vertical-align:middle;
 	}
-    .bars_component a {
+    .nav-components a {
         font-size: 17px;
 		font-weight: bold;
 		color: black;
     }
+	.nav-text-component {
+		position: relative;
+		top: 15px;
+		width: 100%;
+		height: 20px;
+		display: table-cell;
+		vertical-align:middle;
+	}
     .nav-link-clicked:link {
         text-decoration: underline;
     }
-	#mydoc-bar {left: -1px;}#search-bar {left: 97.5px;}#package-bar {left: 195px;}
+	#mydoc-bar {left: 100px;} #search-bar {left: 300px;} #package-bar {left: 500px;}
     .loginbar {
 		right: 60px;
 		width: 300px;
