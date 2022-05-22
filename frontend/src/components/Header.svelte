@@ -1,8 +1,8 @@
 <script>
 	import { links } from 'svelte-routing';
 	// components
-    // exports
-    export let navLoc;
+  // exports
+  export let navLoc;
 </script>
 <header>
 	<a href="/"><div class="knock"><b>KnocK</b></div></a>
